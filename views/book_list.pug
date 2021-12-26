@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+  -console.log(book_list)
+    each book in book_list
+      li
+      -console.log(book)
+        a(href=book.url) #{book.title}
+        
+
+    else
+      li There are no books.
